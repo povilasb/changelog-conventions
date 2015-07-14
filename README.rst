@@ -1,6 +1,11 @@
-================
-Keep a CHANGELOG
-================
+=====================
+CHANGELOG conventions
+=====================
+
+These conventions are highly advisable but not mandatory. They can be slightly
+modify on different projects. This convention is only meant to help you getting
+started.
+
 
 What’s a change log?
 ====================
@@ -20,26 +25,21 @@ project.
 Why should I care?
 ==================
 
-Because software tools are for people. If you don’t care, why are you
-contributing to open source? Surely, there must be a kernel (ha!) of
-care somewhere in that lovely little brain of yours.
+Because software tools are for people.
 
-I `talked with Adam Stacoviak and Jerod Santo on The
+There's a `talk with Adam Stacoviak and Jerod Santo on The
 Changelog <http://5by5.tv/changelog/127>`__ (fitting, right?) podcast
 about why open source maintainers and contributors should care, and the
-motivations behind this project. If you can spare the time (1:06), it’s
-a good listen.
+motivations behind this project.
 
 
 What makes a good change log?
 =============================
 
-I’m glad you asked.
-
 A good change log sticks to these principles:
 
 * It’s made for humans, not machines, so legibility is crucial.
-* Easy to link to any section (hence Markdown over plain text).
+* Easy to link to any section (hence ReStructuredText over plain text).
 * One sub-section per version.
 * List releases in reverse-chronological order (newest on top).
 * Write all dates in ``YYYY-MM-DD`` format. (Example: ``2012-06-02``
@@ -48,15 +48,16 @@ A good change log sticks to these principles:
 * Explicitly mention whether the project follows `Semantic
   Versioning <http://semver.org>`__.
 * Each version should:
-* List its release date in the above format.
-* Group changes to describe their impact on the project, as follows:
 
-  - ``Added`` for new features.
-  - ``Changed`` for changes in existing functionality.
-  - ``Deprecated`` for once-stable features removed in upcoming releases.
-  - ``Removed`` for deprecated features removed in this release.
-  - ``Fixed`` for any bug fixes.
-  - ``Security`` to invite users to upgrade in case of vulnerabilities.
+  - List its release date in the above format.
+  - Group changes to describe their impact on the project, as follows:
+
+    + ``Added`` for new features.
+    + ``Changed`` for changes in existing functionality.
+    + ``Deprecated`` for once-stable features removed in upcoming releases.
+    + ``Removed`` for deprecated features removed in this release.
+    + ``Fixed`` for any bug fixes.
+    + ``Security`` to invite users to upgrade in case of vulnerabilities.
 
 
 How can I minimize the effort required?
@@ -75,7 +76,7 @@ This serves two purposes:
 What makes unicorns cry?
 ========================
 
-Alright…let’s get into it.
+Alright… let’s get into it.
 
 * **Dumping a diff of commit logs.** Just don’t do that, you’re helping
   nobody.
@@ -91,7 +92,7 @@ Alright…let’s get into it.
   standard <http://www.iso.org/iso/home/standards/iso8601.htm>`__.
   Thus, it is the recommended date format for change logs.
 
-There’s more. Help me collect those unicorn tears by `opening an
+There’s more. Help collect those unicorn tears by `opening an
 issue <https://github.com/olivierlacan/keep-a-changelog/issues>`__ or a
 pull request.
 
@@ -99,27 +100,13 @@ pull request.
 Is there a standard change log format?
 ======================================
 
-Sadly, no. Calm down. I know you're furiously rushing to find that link
-to the GNU change log style guide, or the two-paragraph GNU NEWS file
-"guideline". The GNU style guide is a nice start but it is naive.
-There's nothing wrong with being naive but when people need guidance
-it's rarely very helpful. Especially when there are many situations and
-edge cases to deal with.
-
-This project `contains what I hope will become a better CHANGELOG file
-convention <./CHANGELOG.md>`__ for all open source projects. Can the
-open source community learn from its mistake and not act as if the ten
-commandments were written long ago and got everything right? Alright. So
-please take a look around and remember that `discussions and suggestions
-for improvements are
-welcome <https://github.com/olivierlacan/keep-a-changelog/issues>`__!
+Sadly, no.
 
 
 What should the change log file be named?
 =========================================
 
-Well, if you can’t tell from the example above, ``CHANGELOG.rst`` is the
-best convention so far.
+``CHANGELOG.rst`` is the best convention so far.
 
 Some projects also use ``HISTORY.txt``, ``HISTORY.md``, ``History.md``,
 ``NEWS.txt``, ``NEWS.md``, ``News.txt``, ``RELEASES.txt``,
@@ -142,64 +129,3 @@ between these states.
 As is the difference between good comments and the code itself, so is
 the difference between a change log and the commit log: one describes
 the *why*, the other the how.
-
-
-Can change logs be automatically parsed?
-========================================
-
-It’s difficult, because people follow wildly different formats and file
-names.
-
-`Vandamme <https://github.com/tech-angels/vandamme/>`__ is a Ruby gem
-created by the `Gemnasium <http://gemnasium.com>`__ team and which
-parses many (but not all) open source project change logs.
-
-
-Why do you alternate between spelling it "CHANGELOG" and "change log"?
-======================================================================
-
-"CHANGELOG" is the name of the file itself. It's a bit shouty but it's a
-historical convention followed by many open source projects. Other
-examples of similar files include ```README`` <README.md>`__,
-```LICENSE`` <LICENSE>`__, and ```CONTRIBUTING`` <CONTRIBUTING.md>`__.
-
-The uppercase naming (which in old operating systems made these files
-stick to the top) is used to draw attention to them. Since they're
-important metadata about the project, they could be useful to anyone
-intending to use or contribute to it, much like `open source project
-badges <http://shields.io>`__.
-
-When I refer to a "change log", I'm talking about the function of this
-file: to log changes.
-
-
-What about yanked releases?
-===========================
-
-Yanked releases are versions that had to be pulled because of a serious
-bug or security issue. Often these versions don't even appear in change
-logs. They should. This is how you should display them::
-
-	[0.0.5] - 2014-12-13 [YANKED]
-	=============================
-
-The ``[YANKED]`` tag is loud for a reason. It's important for people to
-notice it. Since it's surrounded by brackets it's also easier to parse
-programmatically.
-
-
-How can I contribute?
-=====================
-
-This document is not the **truth**; it’s my carefully considered
-opinion, along with information and examples I gathered. Although I
-provide an actual `CHANGELOG <./CHANGELOG.md>`__ on `the GitHub
-repo <https://github.com/olivierlacan/keep-a-changelog>`__, I have
-purposefully not created a proper *release* or clear list of rules to
-follow (as `SemVer.org <http://semver.org>`__ does, for instance).
-
-This is because I want our community to reach a consensus. I believe the
-discussion is as important as the end result.
-
-So please `**pitch
-in** <https://github.com/olivierlacan/keep-a-changelog>`__.
