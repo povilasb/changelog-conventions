@@ -129,3 +129,84 @@ between these states.
 As is the difference between good comments and the code itself, so is
 the difference between a change log and the commit log: one describes
 the *why*, the other the how.
+
+
+Example
+=======
+
+
+::
+
+	==========
+	Change Log
+	==========
+
+	All notable changes to this project will be documented in this file.
+	This project adheres to [Semantic Versioning](http://semver.org/).
+
+	[Unreleased][unreleased]
+	========================
+
+	Changed
+	-------
+
+	* Improve argument against commit logs.
+
+	[0.0.8] - 2015-02-17
+	====================
+
+	Changed
+	-------
+
+	* Update year to match in every README example.
+	* Reluctantly stop making fun of Brits only, since most of the world
+	  writes dates in a strange way.
+
+	Fixed
+	-----
+
+	* Fix typos in recent README changes.
+	* Update outdated unreleased diff link.
+
+	[0.0.7] - 2015-02-16
+	====================
+
+	Added
+	-----
+
+	* Link, and make it obvious that date format is ISO 8601.
+
+	Changed
+	-------
+
+	* Clarified the section on "Is there a standard change log format?".
+
+	Fixed
+	-----
+
+	* Fix Markdown links to tag comparison URL with footnote-style links.
+
+	[0.0.6] - 2014-08-09
+	====================
+
+	Added
+	-----
+
+	* Better explanation of the difference between the file ("CHANGELOG")
+	  and its function "the change log".
+
+	Changed
+	-------
+
+	* Refer to a "change log" instead of a "CHANGELOG" throughout the site
+	  to differentiate between the file and the purpose of the file — the
+	  logging of changes.
+
+	Removed
+	-------
+
+	* Remove empty sections from CHANGELOG, they occupy too much space and
+	  create too much noise in the file. People will have to assume that the
+	  missing sections were intentionally left out because they contained no
+	  notable changes.
+
