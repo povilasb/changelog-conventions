@@ -3,8 +3,8 @@ CHANGELOG conventions
 =====================
 
 These conventions are highly advisable but not mandatory. They can be slightly
-modify on different projects. This convention is only meant to help you getting
-started.
+modified on different projects. These conventions are only meant to help you
+getting started.
 
 
 What’s a change log?
